@@ -31,6 +31,7 @@ d.addEventListener("click",e=>{
     remove()
   }
   if (e.target.matches('#cancel')) remove();
+  if (e.target.matches('#pop-show-info-container')) remove();
 })
 
 function addName(){
