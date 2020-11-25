@@ -9,7 +9,7 @@ body {
 }
 main {
   width: 100%;
-  margin: 25% auto 0;
+  margin: 40vh auto 0;
 }
 #btn-container {
   width: inherit;
@@ -17,22 +17,7 @@ main {
   justify-content: space-around;
 }
 /*-------------------------add container-----------*/
-#pop-add-info-container {
-  background-color: var(--principal-color);
-  box-shadow: 0px 0px 15px 5px var(--border-color);
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  position: fixed;
-  top: 0px;
-  left: 20vw;
-  height: 20vh;
-  padding: 1em;
-  /* transform: translateY(0);
-  transition: all 1s ease; */
-}
+#pop-add-info-container,
 #pop-show-info-container {
   background-color: var(--principal-color);
   box-shadow: 0px 0px 15px 5px var(--border-color);
@@ -42,14 +27,31 @@ main {
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
-  top: 0%;
-  left: 30vw;
+  top: 5%;
+  left: 0%;
+  right: 0;
+  width: 50vw;
   height: 20vh;
   padding: 1em;
-  /* transition: all 1s ease; */
+  margin: 0 auto;
 }
 
-.appear {
-  transform: translateY(25%);
-  transition: all 1s ease;
+.hl {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (min-width: 720px) {
+  #pop-add-info-container,
+  #pop-show-info-container {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  #pop-add-info-container,
+  #pop-show-info-container {
+    width: 30%;
+  }
 }
