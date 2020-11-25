@@ -26,10 +26,12 @@ main {
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
-  top: 25%;
+  top: 0px;
   left: 20vw;
   height: 20vh;
   padding: 1em;
+  /* transform: translateY(0);
+  transition: all 1s ease; */
 }
 #pop-show-info-container {
   background-color: var(--principal-color);
@@ -40,8 +42,14 @@ main {
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
-  top: 25%;
+  top: 0%;
   left: 30vw;
   height: 20vh;
   padding: 1em;
+  /* transition: all 1s ease; */
+}
+
+.appear {
+  transform: translateY(25%);
+  transition: all 1s ease;
 }

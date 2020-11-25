@@ -6,10 +6,14 @@ const d=document,
 
 d.addEventListener("click",e=>{
   if (e.target.matches('#add-btn')){
-    if(d.body.children[0].lastElementChild.id=='btn-container') addName()
+    if(d.body.children[0].lastElementChild.id=='btn-container') {
+      addName()
+      addClass($addBtn)
+    }
     else{
       remove()
       addName();
+      addClass($addBtn);
     }
   } 
 
@@ -18,6 +22,7 @@ d.addEventListener("click",e=>{
     else{
       remove()
       showName();
+      addClass($showBtn);
     }
   }
 
@@ -47,4 +52,9 @@ function saveName(input){
 
 function remove(){
   d.body.children[0].removeChild(d.body.children[0].lastElementChild)
+}
+
+function addClass(element){
+  element.classList.add('appear')
+  console.log(element)
 }
