@@ -1,7 +1,6 @@
 const d=document,
   $addBtn=d.getElementById('add-info'),
   $showBtn=d.getElementById("show-info");
-
   let $nameValue='Desconocido';
 
 d.addEventListener("click",e=>{
@@ -22,7 +21,6 @@ d.addEventListener("click",e=>{
     else{
       remove()
       showName();
-      addClass($showBtn);
     }
   }
 
@@ -42,7 +40,6 @@ function addName(){
 function showName(){
   const $container=$showBtn.content.cloneNode(true)
   $container.children[0].children[2].textContent=$nameValue;
-  console.log($container.children[0].children[2])
   d.body.children[0].appendChild($container)
 }
 
@@ -55,7 +52,3 @@ function remove(){
   d.body.children[0].removeChild(d.body.children[0].lastElementChild)
 }
 
-function addClass(element){
-  element.classList.add('appear')
-  console.log(element)
-}
